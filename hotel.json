@@ -1,11 +1,11 @@
- hotels : {
+"hotels"{
                         '14' : {
                 name : "La Bastide Saint-Antoine"
                 , type : 'hotel'
                 , LatLng: {lat: 43.6455, lng: 6.9257 }
                                                             }
                         ,'15' : {
-                name : "Le Club de Cavalière &amp; Spa"
+                name : "Le Club de Cavalière & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 43.1508, lng: 6.4343 }
                                                             }
@@ -60,7 +60,7 @@
                 , LatLng: {lat: 48.7333, lng: 0.9285 }
                                                             }
                         ,'45' : {
-                name : "Royal Champagne Hotel &amp; Spa"
+                name : "Royal Champagne Hotel & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 49.091, lng: 3.9762 }
                                                             }
@@ -110,7 +110,7 @@
                 , LatLng: {lat: 47.7697, lng: -3.2821 }
                                                             }
                         ,'55' : {
-                name : "Castel Clara Thalasso &amp; Spa"
+                name : "Castel Clara Thalasso & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 47.3045, lng: -3.2277 }
                                                             }
@@ -230,12 +230,12 @@
                 , LatLng: {lat: 48.5638, lng: 6.4588 }
                                                             }
                         ,'79' : {
-                name : "Hostellerie La Cheneaudière &amp; Spa"
+                name : "Hostellerie La Cheneaudière & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 48.3896, lng: 7.1807 }
                                                             }
                         ,'81' : {
-                name : "La Côte Saint Jacques &amp; Spa"
+                name : "La Côte Saint Jacques & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 47.9836, lng: 3.3902 }
                                                             }
@@ -255,7 +255,7 @@
                 , LatLng: {lat: 46.9084, lng: 4.753 }
                                                             }
                         ,'86' : {
-                name : "Georges Blanc Parc &amp; Spa"
+                name : "Georges Blanc Parc & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 46.2209, lng: 4.9895 }
                                                             }
@@ -295,7 +295,7 @@
                 , LatLng: {lat: 45.8394, lng: 6.2106 }
                                                             }
                         ,'95' : {
-                name : "Le Grand Cœur &amp; Spa"
+                name : "Le Grand Cœur & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 45.3976, lng: 6.5669 }
                                                             }
@@ -315,7 +315,7 @@
                 , LatLng: {lat: 43.9634, lng: 4.7963 }
                                                             }
                         ,'100' : {
-                name : "Baumanière Hôtel &amp; Spa"
+                name : "Baumanière Hôtel & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 43.7435, lng: 4.787 }
                                                             }
@@ -350,7 +350,7 @@
                 , LatLng: {lat: 42.5562, lng: 8.7451 }
                                                             }
                         ,'108' : {
-                name : "Grand Hôtel de Cala Rossa &amp; Spa"
+                name : "Grand Hôtel de Cala Rossa & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 41.622, lng: 9.3359 }
                                                             }
@@ -365,7 +365,7 @@
                 , LatLng: {lat: 43.5258, lng: 6.9425 }
                                                             }
                         ,'217' : {
-                name : "Bas Rupts et Chalet Fleuri"
+                name : "Bas Rupts"
                 , type : 'hotel'
                 , LatLng: {lat: 48.0451, lng: 6.866 }
                                                             }
@@ -375,12 +375,12 @@
                 , LatLng: {lat: 44.8936, lng: -0.1565 }
                                                             }
                         ,'228' : {
-                name : "Domaine de la Bretesche &amp; Spa"
+                name : "Domaine de la Bretesche Golf & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 47.4807, lng: -2.1711 }
                                                             }
                         ,'237' : {
-                name : "Le Phébus &amp; Spa - Villa des Anges"
+                name : "Le Phébus & Spa - Villa des Anges"
                 , type : 'hotel'
                 , LatLng: {lat: 43.9289, lng: 5.2562 }
                                                             }
@@ -400,7 +400,7 @@
                 , LatLng: {lat: 48.8727, lng: 2.3073 }
                                                             }
                         ,'268' : {
-                name : "L’Hôtel de Toiras &amp; Villa Clarisse"
+                name : "L’Hôtel de Toiras & Villa Clarisse"
                 , type : 'hotel'
                 , LatLng: {lat: 46.2046, lng: -1.3678 }
                                                             }
@@ -430,7 +430,7 @@
                 , LatLng: {lat: 47.2159, lng: 4.7226 }
                                                             }
                         ,'299' : {
-                name : "Hôtel &amp; Spa du Castellet"
+                name : "Hôtel & Spa du Castellet"
                 , type : 'hotel'
                 , LatLng: {lat: 43.249, lng: 5.7811 }
                                                             }
@@ -440,7 +440,7 @@
                 , LatLng: {lat: 50.5805, lng: 2.5078 }
                                                             }
                         ,'301' : {
-                name : "Brittany &amp; Spa"
+                name : "Brittany & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 48.7247, lng: -3.9728 }
                                                             }
@@ -470,12 +470,12 @@
                 , LatLng: {lat: 43.2599, lng: 6.6364 }
                                                             }
                         ,'326' : {
-                name : "La Signoria &amp; Spa"
+                name : "La Signoria & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 42.5372, lng: 8.7843 }
                                                             }
                         ,'327' : {
-                name : "Le Couvent des Minimes Hôtel &amp; Spa L&#039;Occitane"
+                name : "Le Couvent des Minimes Hôtel & Spa L&#039;Occitane"
                 , type : 'hotel'
                 , LatLng: {lat: 43.9384, lng: 5.7712 }
                                                             }
@@ -535,7 +535,7 @@
                 , LatLng: {lat: 45.8727, lng: 4.7706 }
                                                             }
                         ,'416' : {
-                name : "Au Cœur du Village Hôtel &amp; Spa"
+                name : "Au Cœur du Village Hôtel & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 45.9045, lng: 6.4227 }
                                                             }
@@ -545,7 +545,7 @@
                 , LatLng: {lat: 46.2694, lng: 6.0195 }
                                                             }
                         ,'430' : {
-                name : "Hôtel Le Chabichou Restaurants &amp; Spa"
+                name : "Hôtel Le Chabichou Restaurants & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 45.4162, lng: 6.629 }
                                                             }
@@ -575,7 +575,7 @@
                 , LatLng: {lat: 49.194, lng: 2.4806 }
                                                             }
                         ,'486' : {
-                name : "Hotel &amp; Restaurant Thierry Drapeau"
+                name : "Hotel & Restaurant Thierry Drapeau"
                 , type : 'hotel'
                 , LatLng: {lat: 46.8799, lng: -1.4058 }
                                                             }
@@ -735,12 +735,12 @@
                 , LatLng: {lat: 46.5656, lng: 4.9079 }
                                                             }
                         ,'689' : {
-                name : "Château Lafaurie-Peyraguey Hôtel &amp; Restaurant LALIQUE"
+                name : "Château Lafaurie-Peyraguey Hôtel & Restaurant LALIQUE"
                 , type : 'hotel'
                 , LatLng: {lat: 44.5498, lng: -0.3373 }
                                                             }
                         ,'690' : {
-                name : "Hotel Ile de la Lagune Thalasso &amp; Spa"
+                name : "Hotel Ile de la Lagune Thalasso & Spa"
                 , type : 'hotel'
                 , LatLng: {lat: 42.6077, lng: 3.0353 }
                                                             }
@@ -749,4 +749,5 @@
                 , type : 'hotel'
                 , LatLng: {lat: 43.7555, lng: 1.0986 }
                                                             }
+                    }
                     }
