@@ -1,8 +1,10 @@
 let michelin = require('./michelin.js')
 let castle = require('./castle.js')
-
-//scraping resto + prix parmis les restos étoilés (de 1 à 3 étoiles)
-var urls = [];
+let fs = require('fs')
+let getURL = castle.getURL
+let getList = castle.getList
+//scraping nom resto (de 1 à 3 étoiles) sur michelin
+var urls = []
 var url = 'https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin/restaurants-2-etoiles-michelin/restaurants-3-etoiles-michelin'
 urls[0] = url
 
@@ -11,15 +13,24 @@ for(var i = 1; i<34; i++){
 }
 
 urls.forEach(function (url){
-  michelin(url,function (err,names,prices,stars){
+  michelin(url,function (err,names){
     if(err) return console.error("Error : ", err)
-    //console.log(names)
-    //console.log(prices)
+    fs.writeFileSync('resto.json', JSON.stringify(names))
   })
 })
-//scraping chefs => hotel + resto + prix
+//scraping chefs => hotel + resto
 var url2 = 'https://www.relaischateaux.com/fr/site-map/etablissements'
-castle(url2,function (err,chefURL){
+getURL(url2,function (err,chefURLs){
   if(err) return console.error("Error : ", err)
-  console.log(chefURL)
+  //console.dir(chefURLs,{'maxArrayLength': null})
+  chefURLs.forEach(function (url){
+    //console.log(url)
+    if(String(url).includes('chef')){
+        getList(String(url),function(err, hotelName, restoName){
+        if(err) return console.error("Error :", err)
+        fs.writeFileSync('hotel.json',JSON.stringify(hotelName))
+        fs.writeFileSync('resto2.json',JSON.stringify(restoName))
+      })
+    }
+  })
 })
