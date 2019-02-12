@@ -2,10 +2,10 @@
   "name": "castle",
   "version": "1.0.0",
   "description": "> Sleep well with Relais & Châteaux",
-  "main": "server.js",
+  "main": "castle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node castle.js"
   },
   "repository": {
     "type": "git",
