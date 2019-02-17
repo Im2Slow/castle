@@ -23,8 +23,12 @@ module.exports.getList = function (url,callback){
   //let restoPrice
   axios(url).then((response) => {
     const $ = cheerio.load(response.data);
-    hotelName = $('div.chefDetailInfo').find('h4').eq(0).text();
-    restoName = $('div.chefDetailInfo').find('h4').eq(1).text();
+    hotelName = {
+      name: $('div.chefDetailInfo').find('h4').eq(0).text()
+    }
+    restoName = {
+      name: $('div.chefDetailInfo').find('h4').eq(1).text()
+    }
     callback(null, hotelName, restoName);
   }).catch(function(err){
     return callback(err, null, null);
