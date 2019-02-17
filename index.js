@@ -33,15 +33,21 @@ getURL(url2,function (err,chefURLs){
     return console.error("Error : ", err);
   }
   //console.dir(chefURLs,{'maxArrayLength': null});
-  chefURLs.forEach(function (i,url){
+  chefURLs.forEach(function (url){
     //console.log(url);
     if(String(url).includes('chef')){
       getList(url,function(err, hotelName, restoName){
         if(err) {
           return console.error("Error :", err);
         }
-        fs.writeFileSync('hotelNames.json', JSON.stringify(hotelName),'utf8');
-        fs.writeFileSync('restoNames.json', JSON.stringify(restoName),'utf8');
+        if(i == 0){
+          fs.writeFileSync('hotelNames.json', JSON.stringify(hotelName),'utf8');
+          fs.writeFileSync('restoNames.json', JSON.stringify(restoName),'utf8');
+        }
+        else{
+          fs.appendFileSync('hotelNames.json', JSON.stringify(hotelName),'utf8');
+          fs.appendFileSync('restoNames.json', JSON.stringify(restoName),'utf8');
+        }
       })
     }
   })
