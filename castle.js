@@ -1,32 +1,32 @@
-let axios = require('axios')
-let cheerio = require('cheerio')
+let axios = require('axios');
+let cheerio = require('cheerio');
 
 module.exports.getURL = function (url,callback){
-  let chefURLs = []
+  let chefURLs = [];
   axios(url).then((response) => {
-    const $ = cheerio.load(response.data)
+    const $ = cheerio.load(response.data);
     $('#countryF').eq(1).find('li').each(function(i,elem){
       if(String($(elem).find('a').eq(1).attr('href')).includes('chef')){
-        chefURLs[i] = String($(elem).find('a').eq(1).attr('href'))
+        chefURLs[i] = String($(elem).find('a').eq(1).attr('href'));
       }
-    })
-    callback(null,chefURLs)
+    });
+    callback(null,chefURLs);
   }).catch(function(err){
-    return callback(err,null)
-  })
-}
+    return callback(err,null);
+  });
+};
 
-module.exports.getList = function(url,callback){
-  let hotelName
+module.exports.getList = function (url,callback){
+  let hotelName;
   //let hotelPrice
-  let restoName
+  let restoName;
   //let restoPrice
   axios(url).then((response) => {
-    const $ = cheerio.load(response.data)
-    hotelName = $('div.chefDetailInfo').find('h4').eq(0).text()
-    restoName = $('div.chefDetailInfo').find('h4').eq(1).text()
-    callback(null, hotelName, restoName)
+    const $ = cheerio.load(response.data);
+    hotelName = $('div.chefDetailInfo').find('h4').eq(0).text();
+    restoName = $('div.chefDetailInfo').find('h4').eq(1).text();
+    callback(null, hotelName, restoName);
   }).catch(function(err){
-    return callback(err, null, null)
-  })
-}
+    return callback(err, null, null);
+  });
+};
