@@ -6,7 +6,7 @@ module.exports = function (url,callback){
   axios(url).then((response) => {
     const $ = cheerio.load(response.data);
     $('li').each(function(i,elem){
-      names = $('div .poi_card-display-title').text();
+      names= $('div .poi_card-display-title').text();
     });
     callback(null,names);
   }).catch(function(err){

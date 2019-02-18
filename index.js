@@ -15,7 +15,7 @@ for(var i = 0; i<33; i++){
 }
 var j = 0;
 urls.forEach(function (url){
-  michelin(url,function (err,names,i){
+  michelin(url,function (err,names){
     if(err){
       return console.error("Error : ", err);
     }
@@ -25,6 +25,7 @@ urls.forEach(function (url){
     }
     else{
         fs.appendFileSync('starredRestaurants.json', JSON.stringify(names),'utf8');
+        j++;
     }
   })
 });
@@ -35,28 +36,21 @@ getURL(url2,function (err,chefURLs){
     return console.error("Error : ", err);
   }
   //console.dir(chefURLs,{'maxArrayLength': null});
-  var index = 0;
-  chefURLs.forEach(function (url){
+  chefURLs.forEach(function (i, url){
     //console.log(url);
     if(String(url).includes('chef')){
-      getList(url,function(err, hotelName, restoName){
+      getList(url,function(err, data){
         if(err) {
           return console.error("Error :", err);
         }
-        if(index == 0){
-          fs.writeFileSync('hotelNames.json',"[" + JSON.stringify(hotelName),'utf8');
-          fs.writeFileSync('restoNames.json',"[" + JSON.stringify(restoName),'utf8');
-          index++;
-        }
-        if(index == hotelName.length - 1){
-          fs.appendFileSync('hotelNames.json', JSON.stringify(hotelName)+"]",'utf8');
-          fs.appendFileSync('restoNames.json', JSON.stringify(restoName)+"]",'utf8');
+        if(i == 0){
+          fs.writeFileSync('castle.json',"[" + JSON.stringify(data),'utf8');
         }
         else{
-          fs.appendFileSync('hotelNames.json',"," + JSON.stringify(hotelName),'utf8');
-          fs.appendFileSync('restoNames.json',"," + JSON.stringify(restoName),'utf8');
+          fs.appendFileSync('castle.json',"," + JSON.stringify(data),'utf8');
         }
       })
     }
   })
+  fs.appendFileSync('castle.json',"]",'utf8');
 });

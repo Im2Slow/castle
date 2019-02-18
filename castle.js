@@ -17,20 +17,23 @@ module.exports.getURL = function (url,callback){
 };
 
 module.exports.getList = function (url,callback){
-  let hotelName;
-  //let hotelPrice
-  let restoName;
-  //let restoPrice
+  let data;
   axios(url).then((response) => {
     const $ = cheerio.load(response.data);
-    hotelName = {
-      name: $('div.chefDetailInfo').find('h4').eq(0).text()
+    data = {
+      hotelName: $('div.chefDetailInfo').find('h4').eq(0).text(),
+      hotelPrice: {
+        room: $('div.chefDetailInfo','#text').text(),
+        suite: $('div.chefDetailInfo').slice("suites :","s.c.").text()
+      },
+      restoName: $('div.chefDetailInfo').find('h4').eq(1).text(),
+      restoPrice: {
+        menu: $('div.chefDetailInfo').slice("Menu :","s.c.").text(),
+        carte: $('div.chefDetailInfo').slice("Carte :","s.c.").text()
+      }
     }
-    restoName = {
-      name: $('div.chefDetailInfo').find('h4').eq(1).text()
-    }
-    callback(null, hotelName, restoName);
+    callback(null, data);
   }).catch(function(err){
-    return callback(err, null, null);
+    return callback(err, null);
   });
 };
